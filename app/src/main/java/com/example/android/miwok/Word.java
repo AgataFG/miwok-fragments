@@ -26,10 +26,10 @@ public class Word {
     public Word(String defaultTranslation, String miwokTranslation, int audioResourceID){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
-        mImageResourceID = mImageResourceID;
+        mAudioResourceID = audioResourceID;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int audioResourceID, int imageResourceID){
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID, int audioResourceID){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceID = imageResourceID;
@@ -70,4 +70,13 @@ public class Word {
         return mAudioResourceID;
     }
 
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mImageResourceID=" + mImageResourceID +
+                ", mAudioResourceID=" + mAudioResourceID +
+                '}';
+    }
 }
